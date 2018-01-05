@@ -1,4 +1,4 @@
-# gnome-trash-empty
+# trash-empty
 Gnome does not empty trash files on ZFS file systems. This service and timer do daily.
 
 # Install
@@ -9,8 +9,8 @@ sudo apt install trash-cli
 # Arch Linux
 sudo pacman -S trash-cli
 
-git clone https://github.com/stesind/gnome-trash-empty.git
-cd gnome-trash-empty
+git clone https://github.com/stesind/trash-empty.git
+cd trash-empty
 
 sudo install -m 644 -o root -g root trash-empty.service /etc/systemd/system
 sudo install -m 644 -o root -g root trash-empty.timer /etc/systemd/system
