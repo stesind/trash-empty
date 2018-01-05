@@ -12,8 +12,12 @@ sudo pacman -S trash-cli
 git clone https://github.com/stesind/gnome-trash-empty.git
 cd gnome-trash-empty
 
-install -m 644 -o root -g root trash-empty.service /etc/systemd/system
-install -m 644 -o root -g root trash-empty.timer /etc/systemd/system
+sudo install -m 644 -o root -g root trash-empty.service /etc/systemd/system
+sudo install -m 644 -o root -g root trash-empty.timer /etc/systemd/system
 
+sudo systemctl daemon-reload
+sudo systemctl enable --now trash-empty.timer
+# Check if listed
+sudo systemctl list-timers
 ```
 Change the default daily frequency according your needs.
