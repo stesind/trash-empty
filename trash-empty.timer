@@ -1,0 +1,11 @@
+# See systemd.timers and systemd.time manpages for details
+[Unit]
+Description=Trash empty daily timer
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+Unit=trash-empty.service
+
+[Install]
+WantedBy=timers.target

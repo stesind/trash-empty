@@ -1,0 +1,7 @@
+[Unit]
+Description=daily trash-empty service
+
+[Service]
+ExecStart=/usr/bin/trash-empty
+ExecStopPost=/bin/echo 'Finished trash empty'
+
